@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <header>
+        <div class="header-text">
+            <h1>Новый гороскоп на 2021 год!</h1>
+            <h2>Узнайте, что Вас ждёт.</h2>
+        </div>
+    </header>
+    <main>
+        <div class="main-img">
+            <img src="./images/zodiak.png" alt="">
+        </div>
+        <div class="main-text">
+            <h2>Узнайте, как 2021 год изменит жизнь каждого из нас!</h2>
+            <p>К сожалению, 2020 год принес нам немало неприятностей, даже откровенных проблем и несчастий. Не смотря на это, 3 знака зодиака очень скоро обретут долгожданное счастье! 2021 год затронет своими потрясениями каждого из нас.</p>
+        </div>
+        <div class="progress hided">
+            <div class="bar"></div>
+        </div>
+        <div class="question">
+            <div class="question-title">
+                <h3>Укажите свой пол:</h3>
+            </div>
+            <div class="question-answers inrow">
+                <div class="question-answer">
+                    <input type="radio" name="sex" value="man" id="male" onchange="startQuiz()">
+                    <label for="male">Мужчина</label>
+                </div>
+                <div class="question-answer">
+                    <input type="radio" name="sex" value="woman" id="female" onchange="startQuiz()">
+                    <label for="female">Женщина</label>
+                </div>
+            </div>
+        </div>
+        <div class="question last hided">
+            <div class="question-title">
+                <h3>Выберите дату своего рождения:</h3>
+            </div>
+            <div class="question-answers">
+                <select name="BirthDate" id="BirthYear" required onchange="checkSelects()"><option disabled selected >Год</option></select>
+                <select name="BirthDate" id="BirthMonth" required onchange="makeDaySelect()"><option disabled selected >Месяц</option></select>
+                <select name="BirthDate" id="BirthDay" required onchange="checkSelects()"><option>День</option></select>
+            </div>
+            <img src="" class="hided" id="zodiak" alt="">
+            <p id="zodiakName"></p>
+            <button class="btn hided" id="lastQuestion" onclick="pending()">Далее</button>    
+        </div>
+        <button class="btn hided" id="nextQuestion"  onclick="nextQuestion()">Далее</button>
+    </main>
+    <footer>
+        <p>2020 © HOROSCOP PERSONAL</p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
